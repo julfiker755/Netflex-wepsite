@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Hero from './Component/Hero/Hero';
+import MoveList from './Component/MoveList/MoveList';
+import Nav from './Component/Nav/Nav';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='bg-gray-800 min-h-screen'>
+     <div className='container mx-auto'>
+     <Nav></Nav>
+      <Hero></Hero>
+     </div>
+    <MoveList title="Your conent sort move" filter="sort_by-rating" carousel={true}></MoveList>
+     <MoveList title="Your conent action move" filter="genre-action"></MoveList>
+      </div>
+      
     </div>
   );
 }
